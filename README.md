@@ -10,4 +10,4 @@ a simple notepad based on java GUI
 2. write code with eclipse
 3. class in src dir..
 
-[![demo]("demo")](https://github.com/huangyebiaoke/notepad/blob/master/resources/demo.png "demo")
+![demo](http://madeai.cn/usr/uploads/demo.png "demo")
