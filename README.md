@@ -9,4 +9,5 @@ a simple notepad based on java GUI
 1. base on javax.swing
 2. write code with eclipse
 3. class in src dir..
-[![demo](https://blog.madeai.cn "demo")](resources/demo.png "demo")
+
+[![demo]("demo")](https://github.com/huangyebiaoke/notepad/blob/master/resources/demo.png "demo")
