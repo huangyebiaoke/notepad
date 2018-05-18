@@ -32,11 +32,9 @@ public class Notepad extends JFrame implements ActionListener {
 
 	JMenuBar menuBar;
 
-	JMenu menu0;
+	JMenu menu0,menu1,menu2;
 
-	JMenu menu1;
-
-	// JMenuItem item0_0,item0_1,item0_2,item0_3, item1_0,item1_1;
+	// MenuItem item0_0,item0_1,item0_2,item0_3, item1_0,item1_1;
 
 	JTextArea textArea;
 	// 文件路径的全局变量;
@@ -69,6 +67,7 @@ public class Notepad extends JFrame implements ActionListener {
 
 		String[][] itemTitle = { 
 				{ "新建", "打开", "保存", "另存", "退出" },
+				{"剪切","复制","黏贴"},
 				{ "作者：小明", "版本：v1.0" }
 			};
 
@@ -85,7 +84,7 @@ public class Notepad extends JFrame implements ActionListener {
 		}
 		menuBar.add(menu0);
 
-		menu1 = new JMenu("关于");
+		menu1 = new JMenu("编辑");
 		JMenuItem[] item1 = new JMenuItem[itemTitle[1].length];
 		for (int i = 0; i < item1.length; i++) {
 			item1[i] = null;
@@ -97,6 +96,19 @@ public class Notepad extends JFrame implements ActionListener {
 			item1[i].setActionCommand(i + item0.length + "");
 		}
 		menuBar.add(menu1);
+		
+		menu2 = new JMenu("关于");
+		JMenuItem[] item2 = new JMenuItem[itemTitle[2].length];
+		for (int i = 0; i < item2.length; i++) {
+			item2[i] = null;
+			item2[i] = new JMenuItem(itemTitle[2][i]);
+			menu2.add(item2[i]);
+			if (i != item2.length - 1)
+				menu2.addSeparator();
+			item2[i].addActionListener(this);
+			item2[i].setActionCommand(i + item0.length +item1.length+ "");
+		}
+		menuBar.add(menu2);
 
 		setJMenuBar(menuBar);
 
@@ -197,7 +209,7 @@ public class Notepad extends JFrame implements ActionListener {
 		}
 		writeFile(f.getAbsolutePath(), text);
 	}
-
+	
 	public void goBlog() {
 		if (java.awt.Desktop.isDesktopSupported()) {
 			try {
@@ -247,6 +259,15 @@ public class Notepad extends JFrame implements ActionListener {
 			dispose();
 			break;
 		case '5':
+			textArea.setText("功能待实现");
+			break;
+		case '6':
+			textArea.setText("功能待实现");
+			break;
+		case '7':
+			textArea.setText("功能待实现");
+			break;
+		case '8':
 			goBlog();
 		}
 	}
