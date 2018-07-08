@@ -4,7 +4,7 @@ a simple notepad based on java GUI
 
 
 
-###usage:
+### usage:
 
 1. `git clone git@github.com:huangyebiaoke/notepad.git`
 
@@ -12,7 +12,7 @@ a simple notepad based on java GUI
 
 
 
-###other:
+### other:
 
 1. base on javax.swing
 
